@@ -76,17 +76,19 @@ if __name__ == "__main__":
         try:
             o = int(input("Please enter the number of items: ")) #1
             l = 0 #1
-            n = input("Enter any number to convert it into words or 'exit' to stop: ")
+            #n = input("Enter any number to convert it into words or 'exit' to stop: ") #5
             while 0 < o: #2
                 c = int(input(": ")) #3
                 l = l+c #3
                 o = o-1 #2
             v = int(input("Vat rate: ")) #4
             v = ((l*v)/100)+l #4
-            print ("Total(Vat included): ",v,"[",n,"]")#4
+            t = round(v) #5
+            n = str(t)
             if o == "exit":
                 break
             int(n)
+            print ("Total(Vat included): ",v,"[",n,"]")#4
             print(n, "-->", converter(n))
         except ValueError:
             print("Error: Invalid Number!")
