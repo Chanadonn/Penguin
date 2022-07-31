@@ -81,6 +81,9 @@ if __name__ == "__main__":
                 c = int(input(": ")) #3
                 l = l+c #3
                 o = o-1 #2
+            v = int(input("Vat rate: ")) #4
+            v = ((l*v)/100)+l #4
+            print ("Total(Vat included): ",v,"[",n,"]")#4
             if o == "exit":
                 break
             int(n)
