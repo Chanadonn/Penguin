@@ -78,6 +78,8 @@ if __name__ == "__main__":
             l = 0 #1
             n = input("Enter any number to convert it into words or 'exit' to stop: ")
             while 0 < o: #2
+                c = int(input(": ")) #3
+                l = l+c #3
                 o = o-1 #2
             if o == "exit":
                 break
