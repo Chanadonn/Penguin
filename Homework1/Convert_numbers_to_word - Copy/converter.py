@@ -74,9 +74,11 @@ def converter(n):
 if __name__ == "__main__":
     while True:
         try:
+            print("Hello!! I will help you to summary the bill^^") #6
             o = int(input("Please enter the number of items: ")) #1
             l = 0 #1
             #n = input("Enter any number to convert it into words or 'exit' to stop: ") #5
+            print ("List the amount of / cost in integer(enter for next items)") #6
             while 0 < o: #2
                 c = int(input(": ")) #3
                 l = l+c #3
@@ -84,11 +86,13 @@ if __name__ == "__main__":
             v = int(input("Vat rate: ")) #4
             v = ((l*v)/100)+l #4
             t = round(v) #5
-            n = str(t)
-            if o == "exit":
-                break
+            n = str(t) #5
             int(n)
-            print ("Total(Vat included): ",v,"[",n,"]")#4
-            print(n, "-->", converter(n))
+            print ("Total(Vat included): ",v,"[",n,"]") #4
+            print("In text: ", converter(n)) #6
+            print ("----------------THANK-YOU---------------\n\n\n") #6
+            e = input("['e' to exit]: ") #6
+            if e == 'e': #6
+                break #6
         except ValueError:
             print("Error: Invalid Number!")
